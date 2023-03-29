@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task App</title>
+    <link href="bootstrap.min.css" rel="stylesheet">    
+    <link href="librerias\dataTables.bootstrap5.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+        <a href="#" class="cintillo navbar-brand">Task App</a>
+
+        <form class="persoform">
+            <div class="btn-group mr-3">
+                <input type="search" id="search" class="form-control mr-sm-3" placeholder="Search Your Homework">
+                <button class="btn btn-success btn-alingth" type="submit"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg></button>
+            </div>
+        </form>
+    </nav>
+
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="task-form">
+                            <input type="hidden" id="task-id">
+                            <div class="form-group p-3">
+                                <input type="text" id="name" placeholder="Task Name" class="form-control">
+                            </div>
+                            <div class="form-group p-3">
+                                <textarea id="description" cols="30" rows="10" class="form-control"
+                                    placeholder="Task Description"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block text-center" style="width: 100%;">Save Task</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="card my-4" id="task-result">
+                    <div class="card-body">
+                        <ul id="container"></ul>
+                    </div>
+                </div>
+                <table class="table table-bordered table-sm">
+                    <thead>
+                        <tr>
+                            <td class="td-hide">ID</td>
+                            <td>NAME</td>
+                            <td>DESCRIPTION</td>
+
+                        </tr>
+                    </thead>
+                    <tbody id="tasks">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="librerias\dataTables.bootstrap5.min.js"></script>
+    <script src="librerias\jquery.dataTables.min.js"></script>
+    <script src="app.js"></script>
+    </html>
